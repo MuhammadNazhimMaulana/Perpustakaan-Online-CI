@@ -90,6 +90,9 @@ class Authorisasi extends BaseController
 
                 return redirect()->to(base_url('admin'));
             }
+            
+            $this->session->setFlashdata('errors', $errors);
+            
         }
         return view('Auth_View/Login_View');
     }
